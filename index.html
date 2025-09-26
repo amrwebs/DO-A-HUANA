@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doña Juana | Catálogo de Genéticas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="assets/logo-dona-juana.png" alt="Doña Juana" class="logo"/>
+      <div class="titles">
+        <h1>Catálogo de Genéticas</h1>
+        <p class="subtitle">Visual, rápido y claro — actualizado por el Grow</p>
+      </div>
+    </div>
+    <div class="actions">
+      <input id="search" type="search" placeholder="Buscar por nombre, sabor, marca…" />
+      <div class="filters">
+        <select id="filter-type">
+          <option value="">Tipo: Todas</option>
+          <option value="AUTOMATICA">Automática</option>
+          <option value="FOTOPERIODICA">Fotoperiódica</option>
+        </select>
+        <select id="filter-days">
+          <option value="">Flora: Todas</option>
+          <option value="<=55">≤ 55 días</option>
+          <option value="56-60">56–60 días</option>
+          <option value="61-65">61–65 días</option>
+          <option value=">65">> 65 días</option>
+        </select>
+        <select id="filter-brand">
+          <option value="">Marca: Todas</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="banner">Diseño Doña Juana — temática cannabis, acentos amarillos. Filtrá por tipo y floración para encontrar tu genética.</div>
+    <div id="grid" class="grid"></div>
+    <template id="card-tpl">
+      <article class="card"><div class="leaf-mark"></div>
+        <div class="chip type"></div>
+        <h3 class="name"></h3>
+        <p class="brand-line"></p>
+        <p class="flavor"></p>
+        <div class="specs">
+          <span class="spec"><strong>Floración:</strong> <span class="days"></span> días</span>
+          <span class="spec"><strong>THC:</strong> <span class="thc"></span></span>
+          <span class="spec"><strong>CBD:</strong> <span class="cbd"></span></span>
+          <span class="spec"><strong>Semillas:</strong> <span class="seeds"></span></span>
+        </div>
+        <div class="ratio"></div>
+        <div class="price"></div>
+      </article>
+    </template>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Doña Juana — Catálogo público. Para actualizar datos: edita <code>data/genetics.json</code> en GitHub.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
